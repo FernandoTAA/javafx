@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="500.0" prefWidth="900.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.javafx.labcustomerregistration.controller.MainController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="%actions">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#include" text="%include" />
+                  <MenuItem mnemonicParsing="false" onAction="#alter" text="%alter" />
+                  <MenuItem mnemonicParsing="false" onAction="#remove" text="%remove" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#exit" text="%exit" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <AnchorPane prefWidth="300.0" BorderPane.alignment="CENTER">
+         <children>
+            <TitledPane animated="false" collapsible="false" text="%customer" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <content>
+                <AnchorPane>
+                     <children>
+                        <TableView fx:id="tableCustomer" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="columnName" minWidth="-1.0" prefWidth="-1.0" text="%name" />
+                            <TableColumn fx:id="columnIdentification" minWidth="-1.0" prefWidth="-1.0" text="%identification" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <TabPane layoutX="75.0" layoutY="84.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+                <Tab text="%personal.information">
+                  <content>
+                    <AnchorPane>
+                           <children>
+                              <GridPane hgap="10.0" vgap="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints />
+                                  <RowConstraints />
+                                  <RowConstraints />
+                                    <RowConstraints />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="%name" />
+                                    <Label text="%identification" GridPane.rowIndex="1" />
+                                    <Label text="%date.birth" GridPane.rowIndex="2" />
+                                    <Label text="%genre" GridPane.rowIndex="3" />
+                                    <Label fx:id="labelName" GridPane.columnIndex="1" />
+                                    <Label fx:id="labelIdentification" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label fx:id="labelDateBirth" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label fx:id="labelGenre" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="%extra.information">
+                  <content>
+                    <AnchorPane>
+                           <children>
+                              <GridPane hgap="10.0" vgap="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints maxWidth="170.0" minWidth="170.0" prefWidth="170.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints />
+                                  <RowConstraints />
+                                  <RowConstraints />
+                                </rowConstraints>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <children>
+                                    <Label text="%purchase.often" />
+                                    <Label text="%forms.payment" GridPane.rowIndex="1" />
+                                    <Label text="%favourite.color" GridPane.rowIndex="2" />
+                                    <Label fx:id="labelPurchaseOften" GridPane.columnIndex="1" />
+                                    <Label fx:id="labelFormsPayment" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Rectangle fx:id="rectangleColor" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="22.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="80.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

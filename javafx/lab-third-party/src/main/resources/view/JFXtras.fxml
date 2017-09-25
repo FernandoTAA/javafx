@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import jfxtras.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="104.0" prefWidth="385.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.javafx.labthirdparty.controller.JFXtrasController">
+   <children>
+      <LocalDateTimeTextField fx:id="textDateTime" layoutX="24.0" layoutY="27.0" prefHeight="31.0" prefWidth="253.0" />
+      <Button layoutX="294.0" layoutY="27.0" mnemonicParsing="false" onAction="#showDateTime" text="Show" />
+      <Label fx:id="labelDateTime" layoutX="24.0" layoutY="70.0" />
+   </children>
+</Pane>

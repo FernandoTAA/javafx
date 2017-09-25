@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.javafx.labanimation.controller.AnimationController">
+   <children>
+      <ProgressBar fx:id="progressBar" layoutX="8.0" layoutY="370.0" prefHeight="23.0" prefWidth="584.0" progress="0.0" />
+      <Button layoutX="227.0" layoutY="185.0" mnemonicParsing="false" onAction="#executeAnimation" text="Execute Animation" />
+      <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="50.0" stroke="BLACK" strokeType="INSIDE" width="50.0" x="50.0" y="50.0" />
+   </children>
+</Pane>

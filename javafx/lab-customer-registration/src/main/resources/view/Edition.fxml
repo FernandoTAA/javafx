@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.javafx.labcustomerregistration.controller.EditionController">
+   <center>
+      <TabPane tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="%personal.information">
+            <content>
+                  <AnchorPane>
+                     <children>
+                        <GridPane hgap="10.0" vgap="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                            <ColumnConstraints maxWidth="180.0" minWidth="180.0" prefWidth="180.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints />
+                            <RowConstraints />
+                            <RowConstraints />
+                            <RowConstraints />
+                          </rowConstraints>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <Label text="%name" />
+                              <Label text="%identification" GridPane.rowIndex="1" />
+                              <Label text="%date.birth" GridPane.rowIndex="2" />
+                              <Label text="%genre" GridPane.rowIndex="3" />
+                              <TextField fx:id="textName" promptText="%name" GridPane.columnIndex="1" />
+                              <TextField fx:id="textIdentification" promptText="%identification" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <DatePicker fx:id="dateBirth" editable="false" promptText="%date.birth" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <ComboBox fx:id="comboGenre" promptText="%combobox.select" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="%extra.information">
+            <content>
+              <AnchorPane>
+                     <children>
+                        <GridPane hgap="10.0" vgap="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                            <ColumnConstraints maxWidth="180.0" minWidth="180.0" prefWidth="180.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints />
+                            <RowConstraints />
+                            <RowConstraints />
+                          </rowConstraints>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <Label text="%purchase.often" />
+                              <Label text="%forms.payment" GridPane.rowIndex="1" />
+                              <Label text="%favourite.color" GridPane.rowIndex="2" />
+                              <HBox spacing="10.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <RadioButton fx:id="radioPurchaseOftenYes" mnemonicParsing="false" text="%yes">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="groupPurchaseOften" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="radioPurchaseOftenNo" mnemonicParsing="false" selected="true" text="%no" toggleGroup="$grupoCompraFrequentemente" />
+                                 </children>
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                              </HBox>
+                              <VBox spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <CheckBox fx:id="checkCash" mnemonicParsing="false" text="%cash" />
+                                    <CheckBox fx:id="checkCard" mnemonicParsing="false" text="%credit.debit.card" />
+                                    <CheckBox fx:id="checkCheck" mnemonicParsing="false" text="%check" />
+                                 </children>
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </VBox>
+                              <ColorPicker fx:id="colorFavouriteColor" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <bottom>
+      <BorderPane prefHeight="50.0" BorderPane.alignment="CENTER">
+         <center>
+            <FlowPane alignment="CENTER" hgap="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button minWidth="100.0" mnemonicParsing="false" onAction="#cancel" text="%cancel">
+                     <effect>
+                        <InnerShadow color="RED" />
+                     </effect></Button>
+                  <Button minWidth="100.0" mnemonicParsing="false" onAction="#save" text="%save">
+                     <effect>
+                        <InnerShadow color="BLUE" />
+                     </effect></Button>
+               </children>
+            </FlowPane>
+         </center>
+         <top>
+            <Separator BorderPane.alignment="CENTER" />
+         </top>
+      </BorderPane>
+   </bottom>
+</BorderPane>

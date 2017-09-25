@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.javafx.labhelloworld.controller.HelloWorldController">  
+	<children>
+      <TextField fx:id="txtName" layoutX="23.0" layoutY="35.0" text="World" />
+      <Button layoutX="217.0" layoutY="35.0" mnemonicParsing="false" onAction="#dizerOla" text="Say Hello"/>
+      <Label fx:id="lblHello" layoutX="46.0" layoutY="73.0" />
+   </children>
+</Pane>

@@ -1,0 +1,41 @@
+AnchorPane {
+	-fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #eeeeee 0%, #bbbbbb 100%);
+}
+
+FlowPane {
+	-fx-background-color: linear-gradient(from 0% 100% to 0% 0%, #eeeeee 0%, #bbbbbb 100%);
+}
+
+RadioButton {
+	-fx-padding: 2;
+}
+
+RadioButton:hover {
+	-fx-border-style: segments(5, 2, 8, 3);
+	-fx-border-color: #aaaaaa;
+	-fx-padding: 1;
+}
+
+RadioButton:selected {
+	-fx-background-color: #cccccc;
+	-fx-padding: 2;
+}
+
+RadioButton:selected:hover {
+	-fx-border-style: dashed;
+	-fx-border-color: #aaaaaa;
+	-fx-padding: 1;
+}
+
+Button:hover {
+	-fx-effect: innershadow( three-pass-box, #cccccc, 10, 0.5, 0, 0);
+}
+
+Button:pressed {
+	-fx-effect: innershadow( three-pass-box, #888888, 15, 0.5, 0, 0);
+}
+
+Button:focused {
+	-fx-effect: innershadow( three-pass-box, #aaaaaa, 20, 0.5, 0, 0);
+}
+
