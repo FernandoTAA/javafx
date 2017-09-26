@@ -10,7 +10,7 @@ Projects
 
 **lab-animation:** Project which teachs to deal with animation in JavaFX.
 
-**lab-graphic:** Project which teachs to deal with graphic, specialy LineChart, in JavaFX.
+**lab-graphic:** Project which teachs to deal with graphic, especially LineChart, in JavaFX.
 
 **lab-javafx-swing:** Project which teachs to deal with integration between JavaFX and Swing. Including Swing component at JavaFX containers, and JavaFX component at Swing containers.
 
